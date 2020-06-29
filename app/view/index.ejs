@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/zui/1.9.1/css/zui.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <link href="/public/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class='header'>
+        <div class='header-text'>
+            <h1 class="header-title"><%=title%></h1>
+            <p class="header-sub">超级好用的开源占位图工具</p>
+        </div>
+    </div>
+    <div class="container main-container" id='main'>
+        <div class="row" style="display:flex;">
+            <div class="col-6">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">图片地址</label>
+                        <input v-model="url" type="text" class="form-control" id="url" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">长度</label>
+                        <input v-model="x" type="text" class="form-control" id="x" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">宽度</label>
+                        <input v-model="y" type="text" class="form-control" id="y" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">文字颜色</label>
+                        <input v-model="textColor" type="text" class="form-control" id="textColor" placeholder="十六进制颜色值，无需输入#">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputInviteCode3">背景颜色</label>
+                        <input v-model="background" class="form-control" id="background" placeholder="十六进制颜色值，无需输入#">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">文字</label>
+                        <input v-model="text" type="text" class="form-control" id="text" placeholder="">
+                    </div>
+                </form>
+            </div>
+            <div class="col-6" style="display: flex">
+                <img v-bind:src="url" style="margin:auto;max-width: 80%;">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/public/main.js"></script>
+
+</html>
