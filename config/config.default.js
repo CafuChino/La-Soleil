@@ -26,6 +26,13 @@ module.exports = appInfo => {
         '.ejs': 'ejs',
       },
     },
+    cluster: {
+      listen: {
+        path: '',
+        port: 7003,
+        hostname: '0.0.0.0',
+      }
+    }
   };
 
   return {
