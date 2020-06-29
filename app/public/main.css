@@ -38,8 +38,19 @@ body {
 
 .main-container {
     margin-top: 18px;
+    margin-bottom: 18px;
 }
 
 .form-inline {
     margin: 18px;
+}
+.footer {
+    height: 70px;
+    text-align: center;
+    display: flex;
+    font-size: 1.4em;
+    background: #cae3fa;
+}
+.footer-text{
+    margin:auto;
 }
