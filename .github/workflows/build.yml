@@ -28,6 +28,6 @@ jobs:
       - name: docker login
         run: docker login ${{ secrets.DOCKER_REPO }} -u ${{ secrets.DOCKER_USERNAME}} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: 构建镜像
-        run: docker build -f Dockerfile -t lasoleil:github-ci-${{github.sha}} .
+        run: docker build -f Dockerfile -t registry.cn-hangzhou.aliyuncs.com/chino/lasoleil:github-ci-${{github.sha}} .
       - name: 推送镜像
-        run: docker push chino/lasoleil:github-ci-${{github.sha}}
+        run: docker push registry.cn-hangzhou.aliyuncs.com/chino/lasoleil:github-ci-${{github.sha}}
