@@ -6,4 +6,4 @@ COPY . /home/node/app
 
 EXPOSE 7000
 
-CMD yarn start
+CMD yarn docker-start
