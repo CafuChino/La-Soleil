@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: 初始化
         uses: actions/checkout@v2
+      - name: 初始化node
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
