@@ -12,7 +12,6 @@ class HomeController extends Controller {
     });
   }
   async pic() {
-    console.log('1');
     const { ctx } = this;
     let { x, y } = ctx.params;
     let { text, textColor, background, sans } = ctx.query;
