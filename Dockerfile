@@ -2,8 +2,10 @@ FROM node:14
 
 RUN mkdir /home/code/laSoleil
 
-WORKDIR /home/code/laSoleil
+WORKDIR /home/node/app
 
-COPY . /home/code/laSoleil
+COPY . /home/node/app
 
-RUN yarn start
+EXPOSE 7000
+
+CMD yarn start
